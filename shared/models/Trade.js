@@ -2,16 +2,12 @@ import mongoose from 'mongoose'
 const { Schema } = mongoose
 
 const TradeSchema = new Schema({
-  base: {
+  symbol: {
     type: String,
     required: true,
     index: true,
   },
-  quote: {
-    type: String,
-    required: true,
-  },
-  buyAmount: {
+  buyQuantity: {
     type: Number,
     required: true,
   },
@@ -27,11 +23,7 @@ const TradeSchema = new Schema({
     type: Date,
     require: true,
   },
-  stopLoss: {
-    type: Number,
-    required: true,
-  },
-  sellAmount: {
+  sellQuantity: {
     type: Number,
     default: 0,
   },
@@ -51,6 +43,32 @@ const TradeSchema = new Schema({
   isOpen: {
     type: Boolean,
     default: true,
+  },
+  buyOrderId: {
+    type: String,
+  },
+  buyClientOrderId: {
+    type: String,
+  },
+  sellOrderId: {
+    type: String,
+  },
+  sellClientOrderId: {
+    type: String,
+  },
+  owner: {
+    type: String,
+    default: 'Baraa',
+  },
+  lastTrailedPrice: {
+    type: Number,
+    default: 0,
+  },
+  botVersion: {
+    type: Object,
+  },
+  farida: {
+    type: String,
   },
 })
 

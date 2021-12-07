@@ -24,7 +24,7 @@ const priceLoop = async () => {
       await Price.create(priceDocument)
     })
   }
-  await timeOutAsync(60000)
+  await timeOutAsync(600000)
   priceLoop()
 }
 
