@@ -25,6 +25,7 @@ const priceLoop = async () => {
     })
   }
   await timeOutAsync(60000)
+  console.log('taking a break between minutes!')
   priceLoop()
 }
 
