@@ -6,14 +6,6 @@ const PriceSchema = new Schema({
     type: String,
     required: true,
   },
-  base: {
-    type: String,
-    required: true,
-  },
-  quote: {
-    type: String,
-    required: true,
-  },
   time: {
     type: Date,
     require: true,

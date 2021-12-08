@@ -16,8 +16,6 @@ const priceLoop = async () => {
       if (!selectedSymbols[symbolPrice.symbol]) return
       const priceDocument = {
         symbol: symbolPrice.symbol,
-        base: selectedSymbols[symbolPrice.symbol].base,
-        quote: selectedSymbols[symbolPrice.symbol].quote,
         price: symbolPrice.price,
         time: Date.now(),
       }
